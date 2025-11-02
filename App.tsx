@@ -5,7 +5,8 @@ import {
     PROJECT_CATEGORIES, 
     EDUCATION_HISTORY, 
     CERTIFICATIONS, 
-    CONTACT_DETAILS 
+    CONTACT_DETAILS,
+    TOOLS_AND_TECH_NODES
 } from './constants';
 import type { ExperienceItem, ProjectCategory, EducationItem, Certification } from './types';
 
@@ -113,6 +114,7 @@ const App: React.FC = () => {
                             return acc;
                         }, {} as { [key: string]: FileNode })
                     },
+                    'tools-and-tech-nodes': { type: 'file', content: TOOLS_AND_TECH_NODES, formatType: 'string' },
                     'education': { type: 'file', content: EDUCATION_HISTORY, formatType: 'education_history' },
                     'certifications': { type: 'file', content: CERTIFICATIONS, formatType: 'certifications_list' },
                     'contact': { type: 'file', content: CONTACT_DETAILS, formatType: 'contact' },
@@ -525,7 +527,7 @@ const App: React.FC = () => {
     const formatProjectCategory = (category: ProjectCategory, key: number) => (
         <div key={key}>
             <h3 className="text-xl font-bold text-cyan-300">{category.title}</h3>
-            <p className="text-sm italic text-slate-400 mb-2">{category.meta}</p>
+            {category.meta && <p className="text-sm italic text-slate-400 mb-4">{category.meta}</p>}
             <div className="space-y-3">
                 {category.projects.map((proj, i) => (
                     <div key={i}>

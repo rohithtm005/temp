@@ -60,10 +60,12 @@ export const EXPERIENCES: ExperienceItem[] = [
     }
 ];
 
+export const TOOLS_AND_TECH_NODES = "Technology Node - TSMC N28, GF22FDX, TPSCo 65 | Tools Used: Cadence Virtuoso, Pegasus, Calibre, ADE Assembler, Voltus-XFi";
+
 export const PROJECT_CATEGORIES: ProjectCategory[] = [
     {
         title: "Layout Works",
-        meta: "Technology Node - TSMC N28, GF22FDX, TPSCo 65 | Tools Used: Cadence Virtuoso, Pegasus, Calibre, ADE Assembler, Voltus-XFi",
+        meta: "",
         projects: [
             {
                 title: "I. Low Dropout Regulator (LDO) - TSMC N28",
@@ -136,4 +138,3 @@ export const CONTACT_DETAILS = {
   linkedin: "linkedin.com/in/rohith-tm",
   location: "Bangalore, Karnataka"
 };
-
